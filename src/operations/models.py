@@ -22,5 +22,3 @@ class Operation(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     amount: Mapped[int] = mapped_column(nullable=False)
     type: Mapped[OperationType] = mapped_column(nullable=False)
-
-print(settings.DB_NAME)
