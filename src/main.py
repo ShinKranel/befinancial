@@ -1,6 +1,8 @@
 import uvicorn
 from fastapi import FastAPI
 
+from src.operations.router import router as operations_router
+
 app = FastAPI()
 
 
@@ -9,15 +11,13 @@ def protected_route():
     return f"Hello, anonym!"
 
 
-@app.get("/users")
-def read_users():
-    return {"users": "users"}
+app.include_router(operations_router, prefix="/operations", tags=["operations"])
 
 
 if __name__ == "__main__":
     uvicorn.run(
-        "main:app",
-        host='127.0.0.1',
+        "src.main:app",
+        host='localhost',
         port=8000,
         reload=True
     )
