@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from sqlalchemy import text
-from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase, relationship
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 from src.db import Base
 from src.budget.models import Budget
 

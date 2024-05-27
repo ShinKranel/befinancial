@@ -1,4 +1,3 @@
-from datetime import datetime
 from pydantic import BaseModel
 
 from src.operations.models import OperationType
@@ -14,7 +13,7 @@ class ReadOperations(BaseModel):
 
 
 class AddOperation(BaseModel):
-    # user_id: int
-    # budget_id: int
+    user_id: int
+    budget_id: int
     amount: int
     type: OperationType

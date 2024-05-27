@@ -1,7 +1,4 @@
-from datetime import datetime
 from pydantic import BaseModel
-
-from src.operations.models import OperationType
 
 
 class ReadBudgets(BaseModel):

@@ -1,7 +1,4 @@
-from datetime import datetime
 from pydantic import BaseModel, EmailStr
-
-from src.operations.models import OperationType
 
 
 class ReadUsers(BaseModel):

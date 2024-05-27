@@ -2,7 +2,7 @@ import enum
 from datetime import datetime
 
 from sqlalchemy import ForeignKey, text
-from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase, relationship
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 from src.db import Base
 
 
@@ -13,10 +13,6 @@ class OperationType(enum.Enum):
 
 
 # Tables -------------------------------
-# class Base(DeclarativeBase):
-#     pass
-
-
 class Operation(Base):
     __tablename__ = "operation"
 
