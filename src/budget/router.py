@@ -2,10 +2,9 @@ from fastapi import APIRouter, Depends
 from sqlalchemy import select, insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.budjet.models import Budget
-from src.budjet.schemas import AddBudget
+from src.budget.models import Budget
+from src.budget.schemas import AddBudget
 from src.db import get_async_session
-from src.operations.models import Operation
 
 router = APIRouter()
 
