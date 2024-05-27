@@ -8,7 +8,11 @@ import sys
 import os
 
 from src.config import settings
-from src.operations.models import Operation
+
+from src.db import Base
+from src.base import Operation
+from src.base import Budget
+from src.base import User
 
 sys.path.append(os.path.join(sys.path[0], 'src'))
 
@@ -33,7 +37,7 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = [Operation.metadata]
+target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
