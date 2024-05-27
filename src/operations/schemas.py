@@ -14,8 +14,7 @@ class ReadOperations(BaseModel):
 
 
 class AddOperation(BaseModel):
-    user_id: int
-    budget_id: int
-    value: int
+    # user_id: int
+    # budget_id: int
+    amount: int
     type: OperationType
-    datetime: datetime

@@ -15,5 +15,6 @@ class ReadBudget(BaseModel):
 
 
 class AddBudget(BaseModel):
-    user_id: int
+    # user_id: int
     value: float
+    user_id: int = 1
